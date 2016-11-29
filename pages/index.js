@@ -3,6 +3,7 @@ import React from 'react';
 import md from 'markdown-in-js';
 
 import containerStyle from '../components/containerStyle';
+import Wrapper from '../components/Wrapper';
 
 const content = md`
 # Joel Burget
@@ -24,12 +25,14 @@ I'm a software developer and designer from the US. I've worked professionally as
 `;
 
 export default () => (
-  <div className={containerStyle}>
-    {content}
-  </div>
+  <Wrapper>
+    <div className={containerStyle}>
+      {content}
+    </div>
+  </Wrapper>
 )
 
-// export default class Index extends React.component {
+// export default class Index extends React.Component {
 //   componentDidMount() {
 //     const Homepage = mkHomePage();
 //     console.log('here');
