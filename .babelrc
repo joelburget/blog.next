@@ -1,0 +1,3 @@
+{
+  "plugins": ["markdown-in-js/babel"]
+}
