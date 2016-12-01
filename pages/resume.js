@@ -25,20 +25,20 @@ Unfortunately most of my paid work is not open-source. However, I do have some p
   was originally stated in /g/.
 * [joelburget/react-live-editor](https://github.com/joelburget/react-live-editor)
   A tool for live editing react components in the browser, used on the react-components [landing page](http://khan.github.io/react-components/).
-* [joelburget/pigment](https://github.com/joelburget/pigment)
+* [joelburget/pigment](https://github.com/joelburget/pigment):
   An experiment in programming language design. Very much a work-in-progress.
   This was originally a fork of the Epigram programming language, but is now
   based on more practical JavaScript tooling.
-* [joelburget/react-haskell](https://github.com/joelburget/react-haskell)
+* [joelburget/react-haskell](https://github.com/joelburget/react-haskell):
   Bindings in Haskell for Facebook's React JavaScript library. It works well
   considering that it's Haskell running in the browser to drive UIs. But this
   is the project where I learned when to quit.
   I wrote about using react-haskell for user interfaces [on my website](http://joelburget.com/react-haskell/).
-* [joelburget/haste-compiler:commonjs](https://github.com/joelburget/haste-compiler/tree/commonjs)
+* [joelburget/haste-compiler:commonjs](https://github.com/joelburget/haste-compiler/tree/commonjs):
   I took an existing Haskell-to-JavaScript compiler and integrated it with
   conventional JavaScript tools (CommonJS modules), so that you can more easily
   use Haskell and JavaScript together.
-  <div style={{margin: '20px 0 40px'}}><iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/DyFcrJL6kxk?rel=0" frameborder="0" allowfullscreen></iframe></div>
+  <div style={{margin: '20px 0 40px'}}><iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/DyFcrJL6kxk?rel=0" frameBorder="0" allowFullScreen /></div>
 
 Many of my projects fall in this niche I've carved out for myself in the intersection between UI and typed functional programming. I enjoy applying the lessons I've learned from each domain to the other.
 
