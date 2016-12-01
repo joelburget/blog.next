@@ -1,15 +1,10 @@
----
-layout: post
-title: Xbox Linux
-category: posts
-published: July 31, 2015
-description: The story of an Xbox which became my first linux server
-authorName: Joel Burget
-header: <link rel="stylesheet" type="text/css" href="/media/css/pigment2.css" media="screen, projection" />
-        <link rel="stylesheet" type="text/css" href="/media/css/960.css" media="screen, projection" />
-        <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
----
+import React from 'react';
+import md from 'markdown-in-js';
 
+import containerStyle from '../components/containerStyle';
+import Wrapper from '../components/Wrapper';
+
+const content = md`
 # Xbox Linux
 
 It's now been a decade since this story happened. I'm trying to write down as much as I can remember before I forget even more.
@@ -85,3 +80,12 @@ So here's the plan
 build eeprom reader - http://www.instructables.com/id/XBox-EEPROM-ReaderWriter/step10/Final-Notes/
 hot swap data transfer
 build usb converter - http://www.instructables.com/id/Professional-USB-Xbox-controller/
+`;
+
+export default () => (
+  <Wrapper>
+    <div className={containerStyle}>
+      {content}
+    </div>
+  </Wrapper>
+)

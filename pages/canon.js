@@ -1,13 +1,10 @@
----
-layout: post
-title: Canon
-category: posts
-published: November 26, 2015
-description: Personal Canon
-authorName: Joel Burget
-header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackathon.css" media="screen, projection">
----
+import React from 'react';
+import md from 'markdown-in-js';
 
+import containerStyle from '../components/containerStyle';
+import Wrapper from '../components/Wrapper';
+
+const content = md`
 # Personal Canon
 
 Inspired by [Duncan Graham's canon](http://dvncan.com/canon.html), and transitively, by [David Cole's](http://www.davidcole.me/#canon), here is a list of people and works that have inspired me. Individually beautiful and interesting; together they make me who I am.
@@ -53,3 +50,12 @@ This is a work in progress.
 **[Visual Complex Analysis](http://www.amazon.com/Visual-Complex-Analysis-Tristan-Needham/dp/0198534469)** -- This book takes an intimidating subject, tells you to ignore the equations and focus on the intuition. Wonderful visualizations. This is what I'm all about.
 
 **[The Diamond Age](http://www.amazon.com/Diamond-Age-Illustrated-Primer-Spectra/dp/0553380966)**
+`;
+
+export default () => (
+  <Wrapper>
+    <div className={containerStyle}>
+      {content}
+    </div>
+  </Wrapper>
+)

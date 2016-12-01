@@ -1,13 +1,10 @@
----
-layout: post
-title: Now
-category: posts
-published: November 26, 2015
-description: What I'm Working on Now
-authorName: Joel Burget
-header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackathon.css" media="screen, projection">
----
+import React from 'react';
+import md from 'markdown-in-js';
 
+import containerStyle from '../components/containerStyle';
+import Wrapper from '../components/Wrapper';
+
+const content = md`
 # What I'm Working on Now
 
 Working on [Pigment](http://pigment.io) -- my vision of a future of computing
@@ -43,3 +40,12 @@ Writing
 Cooking -- currently focused on relying less on the "bunch of stuff in a bowl
 with hot sauce" meme, practicing the fundamentals (a la Julia Child), and
 learning new ingredients
+`;
+
+export default () => (
+  <Wrapper>
+    <div className={containerStyle}>
+      {content}
+    </div>
+  </Wrapper>
+)

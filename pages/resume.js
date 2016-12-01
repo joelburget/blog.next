@@ -1,13 +1,10 @@
----
-layout: post
-title: Resume
-category: posts
-published: November 26, 2015
-description: Resume
-authorName: Joel Burget
-header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackathon.css" media="screen, projection">
----
+import React from 'react';
+import md from 'markdown-in-js';
 
+import containerStyle from '../components/containerStyle';
+import Wrapper from '../components/Wrapper';
+
+const content = md`
 ## Projects:
 
 [github.com/joelburget](https://github.com/joelburget)
@@ -41,15 +38,24 @@ Unfortunately most of my paid work is not open-source. However, I do have some p
   I took an existing Haskell-to-JavaScript compiler and integrated it with
   conventional JavaScript tools (CommonJS modules), so that you can more easily
   use Haskell and JavaScript together.
-  <div style="margin: 20px 0 40px"><iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/DyFcrJL6kxk?rel=0" frameborder="0" allowfullscreen></iframe></div>
+  <div style={{margin: '20px 0 40px'}}><iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/DyFcrJL6kxk?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 Many of my projects fall in this niche I've carved out for myself in the intersection between UI and typed functional programming. I enjoy applying the lessons I've learned from each domain to the other.
 
 ## Work:
 
 * Khan Academy - Software Developer (2011-2015): I worked on many things during my time at Khan Academy -- search / autocomplete, tooling, frontend UI, etc. Full-stack Python / JavaScript web development.
-* Contractor (Oct 2015 - present): I'm working as front-end web contractor with a specialiation in React / Flux. I'm currently working with [Spring](https://www.shopspring.com/) where I built their web search feature.
+* Contractor (Oct 2015 - Feb 2016): I'm working as front-end web contractor with a specialiation in React / Flux. I'm currently working with [Spring](https://www.shopspring.com/) where I built their web search feature. TODO update
 
 ## Education:
 
 BS Mathematics, BS Computer and Information Science with honors. Spring 2012, Ohio State University.
+`;
+
+export default () => (
+  <Wrapper>
+    <div className={containerStyle}>
+      {content}
+    </div>
+  </Wrapper>
+)

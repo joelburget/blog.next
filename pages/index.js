@@ -12,10 +12,9 @@ I'm a software developer and designer from the US. I've worked professionally as
 
 ## Links
 
-[/posts](/posts): Blog
-[/now](/now): What I'm working on how
-[/canon](/canon): Inspiration
-[/resume](/resume): Work I'm proud of
+* [/now](/now): What I'm working on how
+* [/canon](/canon): Inspiration
+* [/resume](/resume): Work I'm proud of
 
 ## Get in Touch
 
