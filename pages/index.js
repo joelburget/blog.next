@@ -20,7 +20,7 @@ I'm a software developer and designer from the US. I've worked professionally as
 
 * github: [joelburget](https://github.com/joelburget)
 * twitter: [dino_joel](http://twitter.com/dino_joel)
-* email: [joelburget@gmail.com](joelburget@gmail.com)
+* email: [joelburget@gmail.com](mailto:joelburget@gmail.com)
 `;
 
 export default () => (
