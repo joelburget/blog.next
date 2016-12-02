@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "markdown-in-js": "^1.1.3",
-    "next": "latest"
+    "next": "latest",
+    "react-ga": "^2.1.2"
   }
 }
