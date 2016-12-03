@@ -7,19 +7,16 @@ import Wrapper from '../components/Wrapper';
 const content = md`
 # What I'm Working on Now
 
-Working on [Pigment](http://pigment.io) -- my vision of a future of computing
+Working on [Pigment](https://pigment.io) -- my vision of a future of computing
+
+Working on a mashup of [Raft](https://raft.github.io/) and [Quorum](https://github.com/jpmorganchase/quorum) for a distributed ledger with fast consensus and high throughput (compared to proof of work).
 
 Traveling / Exploring
 
-Doing software consulting (currently at [Spring](http://shopspring.com))
-
 Reading
 
-  - The Once and Future King
-  - Bleak House
-  - Scott Alexander (Slate Star Codex) posts
-  - The Timeless Way of Building
-  - The Count of Monte Cristo
+  - Dune (again)
+  - Infinite Jest (I've been reading this for, like, a year)
 
 Papers
 
@@ -37,9 +34,7 @@ Writing
   - "A Funny Thing Happened on the Way to the Future"
   - My First Linux Computer -- my XBox
 
-Cooking -- currently focused on relying less on the "bunch of stuff in a bowl
-with hot sauce" meme, practicing the fundamentals (a la Julia Child), and
-learning new ingredients
+Cooking -- Currently infatuated with Thai, Japanese, Chinese, and Korean.
 `;
 
 export default () => (

@@ -5,6 +5,8 @@ import md from 'markdown-in-js';
 import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
+// <img src="/static/me.jpg" style={{width: '100%'}} />
+
 const content = md`
 # Joel Burget
 

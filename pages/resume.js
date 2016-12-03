@@ -45,7 +45,8 @@ Many of my projects fall in this niche I've carved out for myself in the interse
 ## Work:
 
 * Khan Academy - Software Developer (2011-2015): I worked on many things during my time at Khan Academy -- search / autocomplete, tooling, frontend UI, etc. Full-stack Python / JavaScript web development.
-* Contractor (Oct 2015 - Feb 2016): I'm working as front-end web contractor with a specialiation in React / Flux. I'm currently working with [Spring](https://www.shopspring.com/) where I built their web search feature. TODO update
+* Consultant (Oct 2015 - Feb 2016): I worked as a front-end web consultant with a specialiation in React / Flux. I worked with [Spring](https://www.shopspring.com/) where I built their web search feature and [AlphaSheets](http://www.alphasheets.com/) where I helped with architecture and best practices.
+* JP Morgan - New Product Development Engineer - Vice President (Feb 2016 - Current): I'm currently working on adding Raft-based consensus to the Ethereum Virtual Machine / Blockchain. I previously split time between a developing a functional programming language called Hopper and front-end web development and design.
 
 ## Education:
 
