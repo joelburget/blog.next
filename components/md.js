@@ -4,8 +4,10 @@ import md from 'markdown-in-js';
 
 import containerStyle from './containerStyle';
 
+const mapping = {
+  a: Link,
+};
+
 export default fn => (
-  <div className={containerStyle}>
-    {md({a: Link}, fn)}
-  </div>
+  <div className={containerStyle}>{md(mapping, fn)}</div>
 )

@@ -30,6 +30,14 @@ export default css({
     fontSize: '13px',
     lineHeight: '22px',
   },
+
+  '& em::before, & em::after': {
+    content: '_',
+  },
+
+  '& strong::before, & strong::after': {
+    content: '*',
+  },
   // '& li': {
   //   fontSize: 13
   // },
