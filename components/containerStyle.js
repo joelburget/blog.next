@@ -32,11 +32,16 @@ export default css({
   },
 
   '& em::before, & em::after': {
-    content: '_',
+    content: '/',
   },
 
   '& strong::before, & strong::after': {
     content: '*',
+  },
+
+  // not sure if a good idea / used?
+  '& u::before, & u::after': {
+    content: '_',
   },
   // '& li': {
   //   fontSize: 13
