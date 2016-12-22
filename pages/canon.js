@@ -1,10 +1,10 @@
 import React from 'react';
 import md from 'markdown-in-js';
 
-import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
+import render from '../md/renderer';
 
-const content = md`
+const content = `
 # Personal Canon
 
 Inspired by [Duncan Graham's canon](http://dvncan.com/canon.html), and transitively, by [David Cole's](http://www.davidcole.me/#canon), here is a list of people and works that have inspired me. Individually beautiful and interesting; together they make me who I am.
@@ -54,8 +54,6 @@ This is a work in progress.
 
 export default () => (
   <Wrapper>
-    <div className={containerStyle}>
-      {content}
-    </div>
+    {render(content)}
   </Wrapper>
 )
