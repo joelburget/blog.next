@@ -3,8 +3,6 @@ import commonmark from 'commonmark';
 import { escapeXml as esc } from 'commonmark/lib/common';
 import Link from 'next/link'
 
-import containerStyle from '../components/containerStyle';
-
 let reUnsafeProtocol = /^javascript:|vbscript:|file:|data:/i;
 let reSafeDataProtocol = /^data:image\/(?:png|gif|jpeg|webp)/i;
 
@@ -48,27 +46,42 @@ function render_(ast) {
   let event;
   while(event = walker.next()) {
     const { type, level } = event.node;
+    if (!event.entering) {
+      if (type === 'text') {
+        console.log('2');
+        pushEnd(stack, event.node.literal);
+      } else {
+        const children = stack.pop();
+        // TODO custom tags
+        const [tag, extras] = findTag(event.node);
+        pushEnd(stack, React.createElement(tag, extras, ...children));
+      }
+    }
+    continue;
+
     if (type === 'document') {
+      console.log('1');
       stack.push([]);
     } else if (type === 'text') {
+      console.log('2');
       pushEnd(stack, event.node.literal);
     } else if (event.entering) {
+      console.log('3');
       stack.push([]);
     } else {
+      console.log('4');
       const children = stack.pop();
       // TODO custom tags
       const [tag, extras] = findTag(event.node);
-      // TODO attrs?
       pushEnd(stack, React.createElement(tag, extras, ...children));
     }
   }
+  console.log({stack});
   return stack;
 }
 
 export default function render(content) {
   const reader = new commonmark.Parser();
   const parsed = reader.parse(content);
-  return (
-    <div className={containerStyle}>{render_(parsed)}</div>
-  );
+  return <div>{render_(parsed)}</div>;
 }

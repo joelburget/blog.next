@@ -1,10 +1,10 @@
 import React from 'react';
-import md from 'markdown-in-js';
 
+import render from '../md/renderer';
 import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
-const content = md`
+const content = `
 # Couldn't find what you're looking for.
 
 Try [home](/)?
@@ -13,7 +13,7 @@ Try [home](/)?
 export default () => (
   <Wrapper>
     <div className={containerStyle}>
-      {content}
+      {render(content)}
     </div>
   </Wrapper>
 )

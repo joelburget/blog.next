@@ -8,8 +8,6 @@ import content from './now.md';
 
 export default () => (
   <Wrapper>
-    <div className={containerStyle}>
-      {render(content)}
-    </div>
+    {render(content)}
   </Wrapper>
 );
