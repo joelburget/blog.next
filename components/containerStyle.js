@@ -18,6 +18,9 @@ h1 {
 h2 {
   font-size: 14px;
 }
+h3 {
+  font-size: 13px;
+}
 h1::before {
   content: '# ';
 }
