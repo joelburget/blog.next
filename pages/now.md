@@ -1,38 +1,29 @@
-# What I'm Working on Now
+# What I'm Doing Now
 
-Working on [Pigment](https://pigment.io) -- my vision of a future of computing
+### Work
 
 Working on a mashup of [Raft](https://raft.github.io/) and [Quorum](https://github.com/jpmorganchase/quorum) for a distributed ledger with fast consensus and high throughput (compared to proof of work).
 
-Traveling / Exploring
+### Traveling / Exploring
 
-Reading
+### Fiction
 
   - Dune (again)
   - Infinite Jest (I've been reading this for, like, a year)
 
-Papers
+### Nonfiction
 
-  - Programming in Martin-Löf’s Type Theory
-  - Metaobject protocols: Why we want them and what else they can do
-  - The Art of the Propagator
-  - Epigram Reloaded
-  - Constructions on Constructors
-  - Elimination with a Motive
-  - Cubical Type Theory: a constructive interpretation of the univalence axiom
+  - [Reflection for the Masses](http://p-cos.blogspot.com/2008/09/reflection-for-masses.html)
+  - [Introduction to Coalgebra](https://www.cambridge.org/core/books/introduction-to-coalgebra/0D508876D20D95E17871320EADC185C6)
+  - [Topoi - The Categorial Analysis of Logic](https://www.amazon.com/Topoi-Categorial-Analysis-Logic-Mathematics/dp/0486450260)
+  - [The Nuprl book](http://www.nuprl.org/book/)
 
-Writing
+### Writing
 
   - An alternative take on routing for React applications
   - "A Funny Thing Happened on the Way to the Future"
   - My First Linux Computer -- my XBox
 
-Cooking -- Currently infatuated with Thai, Japanese, Chinese, and Korean.
+### Cooking
 
-> a block quote
-
-A paragraph with inline /italics/ and `code` and <i>html elements</i> and <Link>react elements</Link>
-
-```
-some block text
-```
+Currently infatuated with Thai, Japanese, Chinese, and Korean.
