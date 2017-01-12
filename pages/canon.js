@@ -1,8 +1,5 @@
 import React from 'react';
-import md from 'markdown-in-js';
-
 import Wrapper from '../components/Wrapper';
-import render from '../md/renderer';
 
 const content = `
 # Personal Canon
@@ -52,8 +49,4 @@ This is a work in progress.
 **[The Diamond Age](http://www.amazon.com/Diamond-Age-Illustrated-Primer-Spectra/dp/0553380966)**
 `;
 
-export default () => (
-  <Wrapper>
-    {render(content)}
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;

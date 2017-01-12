@@ -1,6 +1,4 @@
 import React from 'react';
-
-import render from '../md/renderer';
 import Wrapper from '../components/Wrapper';
 
 const content = `
@@ -33,8 +31,4 @@ Many of my projects fall in this niche I've carved out for myself in the interse
 BS Mathematics, BS Computer and Information Science with honors. Spring 2012, Ohio State University.
 `;
 
-export default () => (
-  <Wrapper>
-    {render(content)}
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;

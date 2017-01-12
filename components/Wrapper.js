@@ -1,8 +1,17 @@
-import React from 'react'
-import ReactGA from 'react-ga'
-import Head from 'next/head'
+import React from 'react';
+import ReactGA from 'react-ga';
+import Head from 'next/head';
+import Link from 'next/link';
+import remark from 'remark';
+import reactRenderer from 'remark-react';
 
 import containerStyle from '../components/containerStyle';
+
+const remarkOpts = {
+  remarkReactComponents: {
+    a: Link,
+  },
+};
 
 export default class Wrapper extends React.Component {
   componentDidMount() {
@@ -10,7 +19,7 @@ export default class Wrapper extends React.Component {
   }
 
   render() {
-    const { chrome } = this.props;
+    const { chrome, children: content } = this.props;
 
     return (
       <div>
@@ -23,7 +32,7 @@ export default class Wrapper extends React.Component {
         </Head>
         <div>
           <div className="host">
-            {this.props.children}
+            {remark().use(reactRenderer, remarkOpts).process(content).contents}
           </div>
           {containerStyle}
         </div>
