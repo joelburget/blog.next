@@ -11,12 +11,9 @@ header: <link rel="stylesheet" type="text/css" href="/media/css/do-not-delete.cs
 ---
 */
 import React from 'react';
-import md from 'markdown-in-js';
-
-import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
-const content = md`
+const content = `
 <h1 id="bigIntro">"Do not delete anything in this directory, ever"</h1>
 
 Truer words were never spoken, as I found out when I was messing around with my /usr/lib directory. I was simply trying to get <a href="http://code.google.com/p/nativeclient/">Native Client</a> (NaCl) to work on my <a href="http://www.archlinux.org/">Arch</a> machine. Not everything was working:
@@ -85,10 +82,4 @@ Luckily, though, I was able to find another version of the library, openssl-1.0.
 The moral of the story is this- don't mess with your /usr/lib directory, or any library directory, unless you really know what you're doing.
 `;
 
-export default () => (
-  <Wrapper>
-    <div className={containerStyle}>
-      {content}
-    </div>
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;

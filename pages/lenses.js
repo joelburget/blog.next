@@ -11,12 +11,9 @@ header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackatho
 ---
 */
 import React from 'react';
-import md from 'markdown-in-js';
-
-import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
-const content = md`
+const content = `
 # Javascript Lenses
 
 Lenses are a pattern that Haskell has had for a while, where they make life much easier. I think it's time to adopt them in JavaScript, where they can make certain classes of code easier to write, easier to read, and faster.
@@ -151,10 +148,4 @@ lens(recipe)
 Use lenses! They do a lot of work for you and lead to faster, more readable code.
 `;
 
-export default () => (
-  <Wrapper>
-    <div className={containerStyle}>
-      {content}
-    </div>
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;

@@ -1,10 +1,7 @@
 import React from 'react';
-import md from 'markdown-in-js';
-
-import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
-const content = md`
+const content = `
 # Cologne: Good-Smelling Ray Tracer
 
 Cologne is my attempt to write an <i>interesting</i> ray tracer in Haskell. I hope to fulfill the following goals:
@@ -30,10 +27,4 @@ Cologne is my attempt to write an <i>interesting</i> ray tracer in Haskell. I ho
 <a href="http://github.com/joelburget/cologne">Get the code (github)</a>
 `;
 
-export default () => (
-  <Wrapper>
-    <div className={containerStyle}>
-      {content}
-    </div>
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;

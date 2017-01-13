@@ -1,10 +1,7 @@
 import React from 'react';
-import md from 'markdown-in-js';
-
-import containerStyle from '../components/containerStyle';
 import Wrapper from '../components/Wrapper';
 
-const content = md`
+const content = `
 # Xbox Linux
 
 It's now been a decade since this story happened. I'm trying to write down as much as I can remember before I forget even more.
@@ -82,10 +79,4 @@ hot swap data transfer
 build usb converter - http://www.instructables.com/id/Professional-USB-Xbox-controller/
 `;
 
-export default () => (
-  <Wrapper>
-    <div className={containerStyle}>
-      {content}
-    </div>
-  </Wrapper>
-)
+export default () => <Wrapper>{content}</Wrapper>;
