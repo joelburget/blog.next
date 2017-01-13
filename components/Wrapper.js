@@ -32,7 +32,16 @@ export default class Wrapper extends React.Component {
         </Head>
         <div>
           <div className="host">
+            <nav>
+              <Link href="/">/home</Link>
+            </nav>
             {remark().use(reactRenderer, remarkOpts).process(content).contents}
+            <style jsx>{`
+              nav {
+                margin-bottom: 80px;
+                font-size: 14px;
+              }
+            `}</style>
           </div>
           {containerStyle}
         </div>
