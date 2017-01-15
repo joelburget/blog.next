@@ -31,8 +31,11 @@ export default class Wrapper extends React.Component {
         <div>
           <div className="host">
             <nav>
-              <Link href="/">/home</Link>
-              <Link href="/posts">/posts</Link>
+              <ul>
+                <li><Link href="/">joelburget.com</Link></li>
+                <li style={{margin: '0 2em 0 1em'}}>(<Link href="https://github.com/joelburget/blog.next">src</Link>)</li>
+                <li><Link href="/posts">/posts</Link></li>
+              </ul>
             </nav>
             {remark().use(reactRenderer, remarkOpts).process(content).contents}
           </div>
@@ -49,9 +52,13 @@ export default class Wrapper extends React.Component {
           font-size: 14px;
         }
 
-        nav a {
-          display: inline-block;
-          margin-right: 20px;
+        nav ul {
+          display: flex;
+          padding: 0; /* remove left padding */
+        }
+
+        nav li {
+          list-style-type: none;
         }
 
         h1, h2, h3 {
