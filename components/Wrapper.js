@@ -32,6 +32,7 @@ export default class Wrapper extends React.Component {
           <div className="host">
             <nav>
               <Link href="/">/home</Link>
+              <Link href="/posts">/posts</Link>
             </nav>
             {remark().use(reactRenderer, remarkOpts).process(content).contents}
           </div>

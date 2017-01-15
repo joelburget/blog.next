@@ -4,6 +4,7 @@ I'm a software developer and designer from the US. I've worked professionally as
 
 ## Links
 
+* [/posts](/posts): Blog posts and other writing
 * [/now](/now): What I'm working on how
 * [/canon](/canon): Inspiration
 * [/resume](/resume): Work I'm proud of
