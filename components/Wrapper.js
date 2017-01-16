@@ -43,6 +43,7 @@ export default class Wrapper extends React.Component {
         .host {
           margin: 0 auto;
           padding: 40px 20px;
+          line-height: 2;
           max-width: 900px;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera San;
           text-rendering: geometricPrecision;
@@ -76,12 +77,19 @@ export default class Wrapper extends React.Component {
         }
         h1::before {
           content: '# ';
+          color: rgba(0, 0, 0, 0.5);
+
         }
         h2::before {
           content: '## ';
+          color: rgba(0, 0, 0, 0.5);
         }
         h3::before {
           content: '### ';
+          color: rgba(0, 0, 0, 0.5);
+        }
+        p {
+          padding-bottom: 2em;
         }
         p, li {
           color: #424242;
@@ -91,10 +99,12 @@ export default class Wrapper extends React.Component {
 
         em::before, em::after {
           content: '/';
+          color: rgba(0, 0, 0, 0.5);
         }
 
         strong::before, strong::after {
           content: '*';
+          color: rgba(0, 0, 0, 0.5);
         }
 
         li > p {
@@ -103,6 +113,7 @@ export default class Wrapper extends React.Component {
         /* not sure if a good idea / used? */
         u::before, u::after {
           content: '_';
+          color: rgba(0, 0, 0, 0.5);
         }
         /*
         li {
