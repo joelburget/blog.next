@@ -5,9 +5,19 @@ import Link from 'next/link';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
 
+// next/link throws if passed multiple children...
+function MyLink({ children, href, as }) {
+  let validChildren = children;
+  if (Array.isArray(children) && children.length == 1) {
+    validChildren = children[0];
+  }
+  const props = {children: validChildren, href, as};
+  return <Link {...props} />;
+}
+
 const remarkOpts = {
   remarkReactComponents: {
-    a: Link,
+    a: MyLink,
   },
 };
 
@@ -37,7 +47,7 @@ export default class Wrapper extends React.Component {
                 <li><Link href="/posts">/posts</Link></li>
               </ul>
             </nav>
-            {remark().use(reactRenderer, remarkOpts).process(content).contents}
+            {remark().use(reactRenderer, remarkOpts).processSync(content).contents}
           </div>
           <style jsx global>{`
         .host {
