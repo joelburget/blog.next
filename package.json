@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "katex": "^0.7.1",
     "next": "2.3.1",
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",
