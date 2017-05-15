@@ -6,11 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "2.0.0-beta.9",
+    "next": "2.3.1",
     "raw-loader": "^0.5.1",
-    "react-ga": "^2.1.2",
-    "remark": "^6.2.0",
-    "remark-react": "^3.1.0"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-ga": "^2.2.0",
+    "remark": "^7.0.1",
+    "remark-react": "^4.0.0"
   },
   "devDependencies": {
     "babel-plugin-inline-import": "^2.0.4"
