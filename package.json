@@ -6,13 +6,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "highlight.js": "^9.11.0",
     "next": "2.3.1",
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-ga": "^2.2.0",
     "remark": "^7.0.1",
-    "remark-react": "^4.0.0"
+    "remark-react": "^4.0.0",
+    "remark-react-lowlight": "^0.4.1"
   },
   "devDependencies": {
     "babel-plugin-inline-import": "^2.0.4"

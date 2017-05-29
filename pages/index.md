@@ -12,5 +12,5 @@ I'm a software developer and designer from the US. I've worked professionally as
 ## Get in Touch
 
 * github: [joelburget](https://github.com/joelburget)
-* twitter: [dino_joel](http://twitter.com/dino_joel)
+* twitter: [dino_joel](https://twitter.com/dino_joel)
 * email: [joelburget@gmail.com](mailto:joelburget@gmail.com)

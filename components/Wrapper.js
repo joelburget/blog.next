@@ -4,20 +4,20 @@ import Head from 'next/head';
 import Link from 'next/link';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
+import RemarkLowlight from 'remark-react-lowlight';
+import js from 'highlight.js/lib/languages/javascript';
 
-// next/link throws if passed multiple children...
 function MyLink({ children, href, as }) {
-  let validChildren = children;
-  if (Array.isArray(children) && children.length == 1) {
-    validChildren = children[0];
-  }
-  const props = {children: validChildren, href, as};
-  return <Link {...props} />;
+  return <Link {...{href, as}}><a>{children}</a></Link>;
 }
 
 const remarkOpts = {
+  sanitize: false,
   remarkReactComponents: {
     a: MyLink,
+    code: RemarkLowlight({
+      js
+    }),
   },
 };
 
@@ -27,16 +27,32 @@ export default class Wrapper extends React.Component {
   }
 
   render() {
-    const { children: content } = this.props;
+    const { children: content, showFooter } = this.props;
+
+    const footer = showFooter &&
+      (
+        <footer>
+          <hr />
+          <h2>Get in Touch</h2>
+          <ul>
+            <li>github: <Link href="https://github.com/joelburget"><a>joelburget</a></Link></li>
+            <li>twitter: <Link href="https://twitter.com/dino_joel"><a>dino_joel</a></Link></li>
+            <li>email: <Link href="mailto:joelburget@gmail.com"><a>joelburget@gmail.com</a></Link></li>
+          </ul>
+        </footer>
+      );
+
+    const title = this.props.title || "Joel Burget";
+    const description = this.props.description || "building the best software i know how. we who cut mere stones must always be envisioning cathedrals";
 
     return (
       <div>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="description" content="building the best software i know how. we who cut mere stones must always be envisioning cathedrals" />
+          <meta name="description" content={description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <title>Joel Burget</title>
+          <title>{title}</title>
         </Head>
         <div>
           <div className="host">
@@ -46,10 +62,15 @@ export default class Wrapper extends React.Component {
                 <li style={{margin: '0 2em 0 1em'}}>(<Link href="https://github.com/joelburget/blog.next">src</Link>)</li>
                 <li><Link href="/posts">/posts</Link></li>
               </ul>
+              <hr />
             </nav>
             {remark().use(reactRenderer, remarkOpts).processSync(content).contents}
+            {footer}
           </div>
           <style jsx global>{`
+        hr {
+          margin: 2em 0;
+        }
         .host {
           margin: 0 auto;
           padding: 40px 20px;

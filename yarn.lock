@@ -1849,6 +1849,10 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+highlight.js@^9.11.0, highlight.js@~9.11.0:
+  version "9.11.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.11.0.tgz#47f98c7399918700db2caf230ded12cec41a84ae"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -1919,6 +1923,10 @@ iconv-lite@~0.4.13:
 ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+
+in-publish@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.0.tgz#e20ff5e3a2afc2690320b6dc552682a9c7fadf51"
 
 indent-string@^2.1.0:
   version "2.1.0"
@@ -2389,6 +2397,12 @@ loud-rejection@^1.0.0:
   dependencies:
     currently-unhandled "^0.4.1"
     signal-exit "^3.0.0"
+
+lowlight@^1.0.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/lowlight/-/lowlight-1.8.0.tgz#955a741f8ec1dc4833943eeb454c3d3f7b6a5519"
+  dependencies:
+    highlight.js "~9.11.0"
 
 lru-cache@^4.0.1:
   version "4.0.2"
@@ -2985,6 +2999,13 @@ prop-types@15.5.7, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, p
   dependencies:
     fbjs "^0.8.9"
 
+prop-types@^15.5.8:
+  version "15.5.10"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+
 property-information@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-3.1.0.tgz#1581bf8a445dfbfef759775a86700e8dda18b4a1"
@@ -3090,6 +3111,14 @@ react-hot-loader@3.0.0-beta.6:
     react-proxy "^3.0.0-alpha.0"
     redbox-react "^1.2.5"
     source-map "^0.4.4"
+
+react-lowlight@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-lowlight/-/react-lowlight-1.0.6.tgz#e0eb3a8169cc99dbdb29f757e2a1b5edd0532280"
+  dependencies:
+    in-publish "^2.0.0"
+    lowlight "^1.0.0"
+    prop-types "^15.5.8"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -3218,6 +3247,12 @@ remark-parse@^3.0.0:
     unist-util-remove-position "^1.0.0"
     vfile-location "^2.0.0"
     xtend "^4.0.1"
+
+remark-react-lowlight@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/remark-react-lowlight/-/remark-react-lowlight-0.4.1.tgz#f707c1c883eed07b0a6dae6205d314ee29b2cde7"
+  dependencies:
+    react-lowlight "^1.0.4"
 
 remark-react@^4.0.0:
   version "4.0.0"

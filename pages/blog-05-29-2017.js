@@ -45,4 +45,4 @@ I found it cited in [Do be do be do](https://arxiv.org/abs/1611.09259) (the *Fra
 Wondering at the coincidence of finding two Olin Shivers papers simultaneously, I looked him up and found [What's in a name?](https://blogs.janestreet.com/whats-in-a-name/). Nice piece about naming in computer science. Though he doesn't mention my favorite type of name, private keys.
 `;
 
-export default () => <Wrapper>{content}</Wrapper>;
+export default () => <Wrapper showFooter>{content}</Wrapper>;

@@ -1,15 +1,3 @@
-/*
----
-layout: post
-title: Hubble
-category: posts
-published: July 29, 2014
-description: A Javascript Lens Library
-authorName: Joel Burget
-header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackathon.css" media="screen, projection">
-        <link rel="stylesheet" type="text/css" href="/media/css/syntax.css" media="screen, projection">
----
-*/
 import React from 'react';
 import Wrapper from '../components/Wrapper';
 
@@ -80,7 +68,7 @@ We tend to sprinkle our code with \`clone\`s where we either anticipate a proble
 
 There's a more systematic and principled way to do the equivalent. Let's take one of those uses of \`clone\` and write it using lenses.
 
-~~~javascript
+~~~js
 var newAttrs = _.clone(oldAttrs);
 newAttrs.childData = ...;
 
@@ -93,7 +81,7 @@ What used to take two steps now takes one! It's clearer (less overhead) to me to
 
 We can also chain mutations.
 
-~~~javascript
+~~~js
 var newNewAttrs = lens(oldAttrs)
     .setC(["childData"], ...)
     .del(["dataWeDontCareAbout"]);
@@ -113,7 +101,7 @@ I couldn't resist naming my little lens library [hubble](https://github.com/joel
 
 You've already seen it in action, but let's look at a few more examples before wrapping up.
 
-~~~javascript
+~~~js
 var recipe = {
     ingredients: [
         {
@@ -148,4 +136,17 @@ lens(recipe)
 Use lenses! They do a lot of work for you and lead to faster, more readable code.
 `;
 
-export default () => <Wrapper>{content}</Wrapper>;
+export default () => <Wrapper showFooter title="Hubble" date="07-29-2014" description="A JavaScript Lens Library">{content}</Wrapper>;
+
+/*
+---
+layout: post
+title: Hubble
+category: posts
+published: July 29, 2014
+description: A Javascript Lens Library
+authorName: Joel Burget
+header: <link rel="stylesheet" type="text/css" href="/media/css/healthy-hackathon.css" media="screen, projection">
+        <link rel="stylesheet" type="text/css" href="/media/css/syntax.css" media="screen, projection">
+---
+*/
